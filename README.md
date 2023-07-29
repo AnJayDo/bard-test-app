@@ -27,6 +27,38 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+## Setup an API endpoint
+
+Create ``src/app/api/route.ts`` file to work with [Next Router Handlers](https://nextjs.org/docs/app/building-your-application/routing/router-handlers)
+
+```js
+import { NextResponse } from 'next/server'
+ 
+export async function GET() {
+  return NextResponse.json({ name: 'Test Bard API endpoint built on Nextjs' })
+}
+```
+
+From this example. Create more endpoints.
+
+## Integrate Bard AI service
+
+Using [bard-ai](https://bard-ai-docs.vercel.app/) (This is not the official Google package). We will get into it later.
+
+Create a ``src/app/lib/bardService.ts``
+```js
+import Bard, { askAI } from 'bard-ai';
+
+const cookie = process.env.BARD_COOKIE || <YOUR_COOKIE>;
+
+export async function askBard(question: string, useJSON?: boolean | undefined) {
+    await Bard.init(cookie);
+    return await askAI(question, useJSON);
+}
+```
+
+## Create Firebase for PaLM
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
