@@ -1,6 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Bard Test App ![Bard thinking logo](https://raw.githubusercontent.com/AnJayDo/bard-test-app/main/public/sparkle_thinking_v2.gif "Bard")
+
+## Requirements
+
+- [NodeJS](https://nodejs.org/en): At leat v18.13.0
+- [NextJS](https://nextjs.org/): Recommend latest version
+- [Bard Experiment](https://bard.google.com/): For getting cookie
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
